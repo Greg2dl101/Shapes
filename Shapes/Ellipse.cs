@@ -6,10 +6,9 @@ namespace Shapes
 {
     class Ellipse
     {
-        //variables for constructors
         public char name; //holds character as name for object
-        public double semMajAxis; //holds double data type for radius of object
-        public double semMinAxis;
+        public double semMajAxis; //holds semi major axis
+        public double semMinAxis;//holds semi minor axis
 
         //Default constructor
         public Ellipse()
@@ -26,7 +25,7 @@ namespace Shapes
             this.semMinAxis = semMinAxis;
         }
 
-        //copy contrutor
+        //copy construtor
         public Ellipse(Ellipse s)
         {
             name = s.name;
@@ -36,13 +35,13 @@ namespace Shapes
             Console.WriteLine(String.Format("A copy of ellipse \"{0}\" has been created!", name));
         }
 
+        //calculates area of object
         public double CalculateArea()
         {
             return Math.PI * semMinAxis * semMinAxis;
         }
 
-
-        //calculates perimeter of ellipse using Ramanujan's formula
+        //calculates parimeter of object using Ramanujan's formula
         public double CalculatePerimeter()
         {
            var a = semMajAxis;

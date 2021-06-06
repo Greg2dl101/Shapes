@@ -6,9 +6,8 @@ namespace Shapes
 {
     class Square
     {
-        //variables for constructors
         public char name; //holds character as name for object
-        public double los; //holds double data type for length of sides of object
+        public double los; //holds length of side of object
 
         //Default constructor
         public Square()
@@ -24,7 +23,7 @@ namespace Shapes
             this.los = los;
         }
 
-        //copy contrutor
+        //copy construtor
         public Square(Square s)
         {
             name = s.name;
@@ -33,11 +32,13 @@ namespace Shapes
             Console.WriteLine(String.Format("A copy of square \"{0}\" has been created!", name));
         }
 
+        //calculates area of object
         public double CalculateArea()
         {
             return Math.Pow(los, 2);
         }
 
+        //calculates perimeter of object
         public double CalculatePerimeter()
         {
             return 4 * los;

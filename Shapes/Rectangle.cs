@@ -6,10 +6,9 @@ namespace Shapes
 {
     class Rectangle
     {
-        //variables for constructors
         public char name; //holds character as name for object
-        public double width; //holds double data type for length of sides of object
-        public double height;
+        public double width; //holds width of object
+        public double height; //holds height of object
 
         //Default constructor
         public Rectangle()
@@ -36,11 +35,13 @@ namespace Shapes
             Console.WriteLine(String.Format("A copy of square \"{0}\" has been created!", name));
         }
 
+        //caculates area of object
         public double CalculateArea()
         {
             return width * height;
         }
 
+        //calcuates parameter of object
         public double CalculatePerimeter()
         {
             return 2 * (width + height);

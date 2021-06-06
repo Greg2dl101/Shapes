@@ -6,9 +6,8 @@ namespace Shapes
 {
     class Circle
     {
-        //variables for constructors
         public char name; //holds character as name for object
-        public double radius; //holds double data type for radius of object
+        public double radius; //holds radius of object
 
         //Default constructor
         public Circle()
@@ -24,7 +23,7 @@ namespace Shapes
             this.radius = radius;
         }
 
-        //copy contrutor
+        //copy construtor
         public Circle(Circle s)
         {
             name = s.name;
@@ -33,11 +32,13 @@ namespace Shapes
             Console.WriteLine(String.Format("A copy of circle \"{0}\" has been created!", name, radius));
         }
 
+        //calculates are of object
         public double CalculateArea()
         {
             return Math.PI * Math.Pow(this.radius, 2);
         }
 
+        //calculates perimeter of object
         public double CalculatePerimeter()
         {
             return Math.PI * (radius * 2);

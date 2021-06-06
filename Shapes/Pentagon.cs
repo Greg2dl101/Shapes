@@ -6,7 +6,6 @@ namespace Shapes
 {
     class Pentagon
     {
-        //variables for constructors
         public char name; //holds character as name for object
         public double side; //holds double data type for length of sides of object
 
@@ -33,11 +32,13 @@ namespace Shapes
             Console.WriteLine(String.Format("A copy of pentagon \"{0}\" has been created!", name));
         }
 
+        //caculates area of object
         public double CalculateArea()
         {
             return .25 * Math.Sqrt(5* (5 + 2 * Math.Sqrt(5))) * Math.Pow(side, 2);
         }
 
+        //calculates primeter of object
         public double CalculatePerimeter()
         {
             return 5 * side;
